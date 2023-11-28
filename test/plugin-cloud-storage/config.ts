@@ -64,11 +64,6 @@ if (
   })
 }
 
-console.log(
-  'Using plugin-cloud-storage adapter:',
-  process.env.PAYLOAD_PUBLIC_CLOUD_STORAGE_ADAPTER || 's3',
-)
-
 export default buildConfigWithDefaults({
   collections: [Media, Users],
   upload: uploadOptions,
@@ -113,6 +108,5 @@ export default buildConfigWithDefaults({
         password: devUser.password,
       },
     })
-    console.log(process.env.S3_ENDPOINT)
   },
 })
